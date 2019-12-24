@@ -1,0 +1,36 @@
+//convert temperature from Celsius to Fahrenheit
+//program should take in Celsius degree and 
+//automatically output Fahrenheit 
+
+#include <iostream>
+#include <cstdlib> 
+using namespace std;
+
+//declare function prototype
+int fahrenheit();
+
+int main()
+{
+
+	//ask user to enter celsius 
+	cout << "Insert temperature in Celsius and I will " << endl;
+	cout << "automatically convert it into fahrenheit." << endl;
+	fahrenheit();						//call function 
+
+	return 0;
+}
+
+//insert values into function 
+int fahrenheit()
+{
+	//declare variables for conversion equation
+	double c;
+	double f;
+
+	cin >> c;
+	f = (c * 1.8) + 32;				//insert equation to calculate conversion 
+	cout << f;
+
+	return 0;
+
+};
