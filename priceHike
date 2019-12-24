@@ -1,0 +1,39 @@
+/*Write a program that calculates a rate 
+increase for a gym membership. Consider the 
+following scenario:
+
+A gym membership, which currently charges 
+$600 per year for membership, has announced 
+that it will increase its membership fee by 
+2 percent each year for the next three years.
+
+Write a program that uses a loop to display 
+the projected rates for the next three years. 
+Be sure to include comments throughout your 
+code where appropriate.
+*/
+
+#include <iostream>
+#include <iomanip>
+
+
+using namespace std;
+
+int main() {
+	//priceHike is 2% annual price increase
+	double projectedRate = 600, priceHike = 12;
+
+	//display table heading
+	cout << "        Cumulative          \n"
+		<< "Year 	Projected Rate 		\n"
+		<< "--------------------------\n\n";
+	//Create & display table 
+	cout << fixed << setprecision(1);
+	for (int year = 1; year <= 3; year++)
+	{
+		projectedRate += priceHike;
+		cout << setw(5) << year
+			<< setw(9) << projectedRate << endl;
+	}
+	return 0;
+}
