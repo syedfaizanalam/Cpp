@@ -1,0 +1,37 @@
+//create a program that assists in conversion
+//fahrenheit to celsius and celsius to fahrenheit
+#include <iostream>
+using namespace std;
+
+int main(){
+    //declare variables used for conditions
+    int f;
+    int c;
+    int choice;
+    
+    //insert instructions for user 
+    cout << "Choose one of the following" << endl;
+    cout << "(1) If you want to convert" << endl;
+    cout << "Celsius to Fahrenheit" << endl;
+    cout << "Or (2) if you want to convert" << endl;
+    cout << "Fahrenheit to Celsius." << endl;
+    cin >> choice;
+    
+    /*condition should give the option to choose between
+    inserting data for celsius or fahrenheit*/
+    /*afterwards, plug in the temperature into conversion
+    equation and output the result of the equation*/
+    if (choice == 1){
+        cout << "Enter the temperature in Celsius" << endl;
+        cin >> c;
+        f = (c * 1.8) + 32;
+        cout << f;
+    } else if (choice == 2){
+        cout << "Enter the temperature in Fahrenheit" << endl;
+        cin >> f;
+        c = (f - 32) * 5/9;
+        cout << c;
+    } else {
+        cout << "Input invalid" << endl;
+    }
+}
